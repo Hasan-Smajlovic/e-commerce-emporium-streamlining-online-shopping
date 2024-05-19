@@ -1,9 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #F8F4E1;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
+/* Navbar */
 .navbarContainer {
     background-color: #333;
     color: #fff;
@@ -40,7 +45,7 @@ body {
     margin-right: 40px;
 }
 
-a {
+.navbarContainer a {
     cursor: pointer;
     text-decoration: none;
     color: #fff;
@@ -49,6 +54,262 @@ a {
 #magnifier {
     position: absolute;
     top:35px;
-    left:1030px;
-    color: black;
+    left:1020px;
+    color: #be9b78;
 }
+
+.navbarContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+
+/* End of Navbar */
+.homeContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 100px 100px 100px;    
+}
+
+.homeContainer h2 {
+    font-family: "Rye", serif;
+    width: 30%;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.homeContainer p {
+    width: 50%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.homeContainer img {
+    position: absolute;
+    top:170px;
+    left:1000px;
+    width: 25%;
+}
+
+.homeContainer a {
+    text-decoration: none;
+    color: white;
+    background-color: #AF8F6F;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.homeContainer a:hover {
+    background-color: #ecba88;
+    color: white;
+    transition: 0.5s;
+}
+/* Home Page */
+
+/*Categories Section */
+.categoriesContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 100px 100px 100px;
+}
+
+.categoriesContent h1 {
+    font-family: "Rye", serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.categoriesContent button {
+    background-color: #F8F4E1;
+    color: #919191;
+    max-height: 0px;
+    padding: 0px 100px 0px 100px;
+    margin: 20px 0px 20px 0px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border: none;
+}
+
+.categoriesContent button:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+
+.categoriesContent img {
+    width: 98%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.categoriesFirstGallery  {
+    display: flex;
+    margin-top: 50px;
+}
+
+.categoriesSecondGallery {
+    display: flex;
+    margin-top: 10px;;
+}
+/* End of Categories Section */
+
+/* Shipping Info */
+.shippingInfoContainer {
+    display: flex;
+    text-align: center;
+}
+
+.shippingInfoContent {
+    margin-left: 200px;
+    text-align: center;
+}
+
+.shippingInfoContainer h3 {
+    font-family: "Rye", serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.shippingInfoContainer p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    width: 200px;
+}
+/* End of Shipping Info */
+
+/*Trendy Collection */
+.trendyCollectionContainer {
+    text-align: center;
+    margin-top: 100px;
+}
+.trendyCollectionContainer h1 {
+    font-family: "Rye", serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+.trendyCollectionGallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.trendyCollectionPhotos img{
+    width: 60%;
+}
+.trendyCollectionPhotos p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 80px;
+}
+/* End of Trendy Collection */
+
+/* About Us */
+
+.aboutContainer  {
+    background-color: #AF8F6F;
+    margin: 50px;
+    padding: 20px 50px 20px 0px;
+}
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+}
+.aboutContent img {
+    width: 70%;
+}
+.aboutContent h3 {
+    font-family: "Rye", serif;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.aboutContent p {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    max-width: 700px;
+    margin-top: 50px;
+}
+/* End of About Us */
+
+/* Newsletter */
+.newletterContent {
+    text-align: center;
+    margin: 100px 100px 100px 100px;
+}
+.newletterContent h1 {
+    font-family: "Rye",serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+.newletterContent p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.newletterContent input {
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    outline: none;
+    background-color: #F8F4E1;
+    border: 3px solid #AF8F6F;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #AF8F6F;
+}
+.newletterContent button {
+    background-color: #AF8F6F;
+    color: #fff;
+    padding: 13px 20px 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border: none;
+}
+
+.newletterContent button:hover {
+    background-color: #ecba88;
+    color: white;
+    transition: 0.5s;
+}
+/* End of Newsletter */
+
+/* Footer */
+.footerContainer {
+    background-color: #AF8F6F;
+    color: #fff;
+    display: flex;
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.footerContainer h3 {
+    margin-left:40px;
+    text-decoration: none;
+    list-style-type: none;
+}
+ul li {
+    list-style-type: none;
+}
+.footerContent {
+    justify-content: space-between;
+    margin: 5px 100px 5px 90px;
+}
+
+.footerContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+/* End of Footer */

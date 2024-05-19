@@ -13,6 +13,7 @@ body {
     justify-content: space-between;
     background-color: #AF8F6F;
     align-items: center;
+    font-size: 18px;
 }
 
 .navbarLogo img{
@@ -29,9 +30,10 @@ body {
     cursor: pointer;
     color:white;
 }
+
 .bagIcon:hover{
-    color: #e0cbb7;
-    transition: 0.5s;
+    color: #252525;
+    transition: 0.3s;
 }
 
 #items{
@@ -47,8 +49,8 @@ li{
 }
 
 li:hover{
-    color: #e0cbb7;
-    transition: 0.5s;
+    color: #252525;
+    transition: 0.3s;
 }
 
 img{
@@ -113,5 +115,6 @@ h1{
 
 #buy:hover{
     background-color: #c9b097;
+    color: #323131;
     transition: 0.5s;
 }

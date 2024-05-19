@@ -185,32 +185,65 @@ textarea{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Adjust width as needed */
+    width: 100%; 
 	display: flex;
     justify-content: center;
 	margin-top: 50px;
 }
 
 .rectangle {
-    width: 20%; /* Width of each rectangle */
-    height: 400px; /* Height of each rectangle */
-    border: 1px solid #AF8F6F ; /* White border */
+    width: 20%; 
+    height: 400px; 
+    border: 1px solid #AF8F6F ; 
     display: flex;
     justify-content: center;
 	padding: 30px;
     align-items: center;
-    color: rgb(0, 0, 0); /* White text color */
-    font-size: 20px; /* Font size of the text */
-    margin: 10px; /* Space between rectangles */
+    color: rgb(0, 0, 0); 
+    font-size: 20px; 
+    margin: 10px; 
+    margin-bottom: 100px;
 }
 
 .Feedback {
         text-align: center;
         color: #AF8F6F;
-        font-size: 50px; /* You can adjust the font size as needed */
+        font-size: 50px; 
         font-weight: bold;
-        margin-top: 100px; /* Adds space above the title */
+        margin-top: 100px; 
     }
+
+
+
+    .footerContainer {
+    background-color: #AF8F6F;
+    color: #fff;
+    display: flex;
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.footerContainer h3 {
+    margin-left:40px;
+    text-decoration: none;
+    list-style-type: none;
+}
+ul li {
+    list-style-type: none;
+}
+.footerContent {
+    justify-content: space-between;
+    margin: 5px 100px 5px 90px;
+}
+
+.footerContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+/* End of Footer */
 	</style>
 <head>
 	<meta charset="UTF-8">
@@ -271,5 +304,48 @@ textarea{
         <div class="rectangle">"I bought a pair of earrings online and they arrived beautifully packaged with a handwritten note. Such a personal touch makes all the difference. I will definitely be back for more."</div>
         <div class="rectangle">"Fantastic customer service! I had a minor issue with a necklace I bought, and they repaired it quickly at no extra charge. It's so refreshing to see a business that stands behind its products."</div>
     </div>
+
+
+
+
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerContent">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="https://www.google.com">Profile</a></li>
+                    <li><a href="https://www.google.com">Cart</a></li>
+                    <li><a href="https://www.google.com">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footerContent">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="https://www.google.com">FAQ</a></li>
+                    <li><a href="https://www.google.com">Shipping</a></li>
+                    <li><a href="https://www.google.com">Returns</a></li>
+                    <li><a href="https://www.google.com">Order Status</a></li>
+                </ul>
+            </div>
+            <div class="footerContent">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.google.com">Facebook</a></li>
+                    <li><a href="https://www.google.com">Instagram</a></li>
+                    <li><a href="https://www.google.com">Twitter</a></li>
+                    <li><a href="https://www.google.com">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footerContent">
+                <h3>About Us</h3>
+                <ul>
+                    <li>Phone: 061896745</li>
+                    <li>Email: euporium@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

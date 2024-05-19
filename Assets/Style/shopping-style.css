@@ -32,7 +32,7 @@ body {
 }
 
 .bagIcon:hover{
-    color: #252525;
+    color: #efd0b3;
     transition: 0.3s;
 }
 
@@ -49,7 +49,7 @@ li{
 }
 
 li:hover{
-    color: #252525;
+    color: #c9b097;
     transition: 0.3s;
 }
 
@@ -110,7 +110,6 @@ h1{
 
 #buy:hover{
     background-color: #c9b097;
-    color: #323131;
     transition: 0.5s;
 }
 

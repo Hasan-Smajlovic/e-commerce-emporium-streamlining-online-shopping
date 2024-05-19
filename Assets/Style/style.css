@@ -1,0 +1,54 @@
+body {
+    background-color: #F8F4E1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbarContainer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    padding-left: 40px;
+    justify-content: space-between;
+    background-color: #AF8F6F;
+}
+
+.navbarLogo img{
+    width: 100px;
+    height: 100px;
+    margin-right: 320px;
+}
+
+.navbarSearch {
+    min-width: 40%;
+    height: 20px;
+    margin-right: 220px;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+#navLinks {
+    display: flex;
+    width: 50%;
+    margin-top: 35px;
+}
+
+.navItem {
+    margin-right: 40px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+#magnifier {
+    position: absolute;
+    top:35px;
+    left:1030px;
+    color: black;
+}

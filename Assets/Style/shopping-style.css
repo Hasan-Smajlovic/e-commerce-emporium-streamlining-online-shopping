@@ -18,17 +18,20 @@ body {
 .navbarLogo img{
     width: 100px;
     height: 100px;
-    margin-right: 320px;
+    margin-right: 250px;
 }
 
-.bagIcon img{
+.bagIcon {
+    margin-top: 20px;
     width: 35px;
     height: 35px;
     padding-right: 90px;
     cursor: pointer;
+    color:white;
 }
-.bagIcon img:hover{
-    color: #fff;
+.bagIcon:hover{
+    color: #e0cbb7;
+    transition: 0.5s;
 }
 
 #items{
@@ -44,7 +47,8 @@ li{
 }
 
 li:hover{
-    color: #452a0d;
+    color: #e0cbb7;
+    transition: 0.5s;
 }
 
 img{
@@ -53,7 +57,6 @@ img{
 }
 
 .earring-images{
-    padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -85,9 +88,12 @@ img{
 }
 
 h1{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-left: 40px;
     padding-top: 20px;
     padding-left: 200px;
-    color: #452a0d
+    color: #be9b78;
 }
 
 #bg-earrings{
@@ -97,7 +103,7 @@ h1{
 
 #buy{
     margin-bottom: 17px;
-    background-color: #6e5b45;
+    background-color: #be9b78;
     color: #fefefe;
     width: 120px;
     height: 35px;
@@ -106,5 +112,6 @@ h1{
 }
 
 #buy:hover{
-    
+    background-color: #c9b097;
+    transition: 0.5s;
 }

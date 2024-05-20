@@ -127,7 +127,7 @@ body {
     background-color: #F8F4E1;
     color: #919191;
     max-height: 0px;
-    padding: 0px 100px 0px 100px;
+    padding: 0px 20px 0px 100px;
     margin: 20px 0px 20px 0px;
     cursor: pointer;
     font-size: 1.5rem;
@@ -142,7 +142,6 @@ body {
 
 .categoriesContent img {
     width: 98%;
-    cursor: pointer;
     margin-left: 10px;
 }
 
@@ -248,7 +247,7 @@ body {
     margin: 20px 0px 35px 220px;
     background-color: #F8F4E1;
     color: black;
-    padding: 20px;
+    padding: 17px;
     cursor: pointer;
     font-size: 1rem;
     letter-spacing: 2px;

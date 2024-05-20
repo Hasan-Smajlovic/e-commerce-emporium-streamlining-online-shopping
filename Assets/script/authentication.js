@@ -38,7 +38,7 @@ registerBtn.addEventListener("click", function () {
 .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert(errorMessage);
+    alert("Email already in use");
 });
 });
 

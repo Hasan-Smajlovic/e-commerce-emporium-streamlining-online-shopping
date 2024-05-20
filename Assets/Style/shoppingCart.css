@@ -1,0 +1,78 @@
+
+.checkoutContainer
+{
+    width: 335px;
+}
+.checkoutContent {
+    text-align: left;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 1000px;
+    padding: 50px 10px 50px 100px;
+    border-left: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkoutContent h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.checkoutFormContent input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #AF8F6F;
+    border-radius: 5px;
+}
+
+.checkoutDivide {
+    height: 3px;
+    background-color: rgb(255, 195, 130);
+    width: 320px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.expDateSecurityCode {
+    display: flex;
+    justify-content: space-between;
+}
+
+#expDate {
+    width: 50%;
+}
+#securityCode {
+    width: 32%;
+}
+
+#sameAddress {
+    width: 45px;
+}
+
+.checkoutFormContent select {
+    width: 96%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(67, 117, 255);
+    color: white;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: rgb(0, 0, 255);
+    transition: 0.5s;
+}

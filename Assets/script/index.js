@@ -1,15 +1,15 @@
 document.getElementById('earrings-link').addEventListener('click', function() {
-    window.location.href = 'earrings.html';
+    window.location.href = 'shopping-section.html';
 });
 
 document.getElementById('necklaces-link').addEventListener('click', function() {
-    window.location.href = 'necklaces.html';
+    window.location.href = 'shopping-section.html';
 });
 
 document.getElementById('rings-link').addEventListener('click', function() {
-    window.location.href = 'rings.html';
+    window.location.href = 'shopping-section.html';
 });
 
 document.getElementById('bracelets-link').addEventListener('click', function() {
-    window.location.href = 'bracelets.html';
+    window.location.href = 'shopping-section.html';
 });

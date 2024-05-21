@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         createUserWithEmailAndPassword(auth, email.value, password.value)
             .then((userCredential) => {
                 const user = userCredential.user;
-                set(ref(database, 'users/' + user.uid), {
+                set(ref(database, 'users/'), {
                     username: username.value,
                     email: email.value,
                     password: password.value 

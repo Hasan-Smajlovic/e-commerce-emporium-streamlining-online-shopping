@@ -13,3 +13,9 @@ document.getElementById('rings-link').addEventListener('scroll', function() {
 document.getElementById('bracelets-link').addEventListener('scroll', function() {
     window.location.href = 'shopping-section.html';
 });
+
+const element1 = getElementById('necklaces-link');
+element.scrollTo({
+    top: 100,
+    behavior: smooth
+});

@@ -1,21 +1,16 @@
-document.getElementById('earrings-link').addEventListener('scroll', function() {
-    window.location.href = 'shopping-section.html';
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const links = {
+        "earrings-link": "earrings-container",
+        "necklaces-link": "necklaces-container",
+        "rings-link": "rings-container",
+        "bracelets-link": "bracelets-container"
+    };
 
-document.getElementById('necklaces-link').addEventListener('scroll', function() {
-    window.location.href = 'shopping-section.html';
-});
-
-document.getElementById('rings-link').addEventListener('scroll', function() {
-    window.location.href = 'shopping-section.html';
-});
-
-document.getElementById('bracelets-link').addEventListener('scroll', function() {
-    window.location.href = 'shopping-section.html';
-});
-
-const element1 = getElementById('necklaces-link');
-element.scrollTo({
-    top: 100,
-    behavior: smooth
+    for (const [linkId, sectionId] of Object.entries(links)) {
+        document.getElementById(linkId).addEventListener('click', function () {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }
 });

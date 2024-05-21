@@ -46,17 +46,16 @@
         </div>
 </section>
 
-<section id="checkout">
-    <div class="checkoutContainer">
-        <div class="checkoutContent">
-            <h1>Checkout</h1>
-            <div class="checkoutForm">
-                <form action="checkout.php" method="post">
-                    <div class="checkoutDivide">
-                    </div>
-                    <div class="checkoutFormContent">
-                        <h3>Delivery</h3>
-                        <select class="form-select" id="country" name="Country">
+    <section id="checkout">
+        <div class="checkoutContainer">
+            <div class="checkoutContent">
+                <h1>Checkout</h1>
+                <div class="checkoutForm">
+                    <form id="checkoutForm" action="checkout.php" method="post">
+                        <div class="checkoutDivide"></div>
+                        <div class="checkoutFormContent">
+                            <h3>Delivery</h3>
+                            <select class="form-select" id="country" name="Country">
                             <option value="">Pick a country...</option>
                             <option value="AF">Afghanistan</option>
                             <option value="AX">Åland Islands</option>
@@ -311,44 +310,44 @@
                             <option value="ZM">Zambia</option>
                             <option value="ZW">Zimbabwe</option>
                         </select>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    <input type="text" id="address" name="address" placeholder="Address">
-                    <input type="text" id="apartment" name="email" placeholder="Apartment, suite, etc.">
-                    <input type="text" id="city" name="city" placeholder="City">
-                    </div>
-                    <div class="checkoutFormContent">
-                        <h3>Payment</h3>
-                        <input type="text" id="cardNum" name="cardNum" placeholder="Card Number">
-                        <div class="expDateSecurityCode"></div>
-                        <input type="text" id="expDate" name="expDate" placeholder="Expiration Date (MM/YY)">
-                        <input type="text" id="securityCode" name="securityCode" placeholder="Security Code">
-                        <input type="text" id="cardName" name="cardName" placeholder="Name on card">
-                    </div>
-                    </div>
-                    <div class="checkoutDivide">
-                    </div>
-                    <div class="checkoutFormContent">
-                        <h3>Order summary</h3>
-                        <div class="orderSummary">
-                            <div class="orderSummaryContent">
-                                <p>Subtotal</p>
-                                <p id="subtotal"></p>
+                            <input type="text" id="name" name="name" placeholder="Name">
+                            <input type="text" id="address" name="address" placeholder="Address">
+                            <input type="text" id="apartment" name="apartment" placeholder="Apartment, suite, etc.">
+                            <input type="text" id="city" name="city" placeholder="City">
+                        </div>
+                        <div class="checkoutFormContent">
+                            <h3>Payment</h3>
+                            <input type="text" id="cardNum" name="cardNum" placeholder="Card Number">
+                            <div class="expDateSecurityCode"></div>
+                            <input type="text" id="expDate" name="expDate" placeholder="Expiration Date (MM/YY)">
+                            <input type="text" id="securityCode" name="securityCode" placeholder="Security Code">
+                            <input type="text" id="cardName" name="cardName" placeholder="Name on card">
+                            <input type="checkbox" id="saveCard">Remember information for next time
+                        </div>
+                        <div class="checkoutDivide"></div>
+                        <div class="checkoutFormContent">
+                            <h3>Order summary</h3>
+                            <div class="orderSummary">
+                                <div class="orderSummaryContent">
+                                    <p>Subtotal</p>
+                                    <p id="subtotal"></p>
+                                </div>
+                                <div class="orderSummaryContent">
+                                    <p>Shipping</p>
+                                    <p id="shipping"></p>
+                                </div>
+                                <div class="orderSummaryContent">
+                                    <p>Total</p>
+                                    <p id="total"></p>
+                                </div>
                             </div>
-                            <div class="orderSummaryContent">
-                                <p>Shipping</p>
-                                <p id="shipping"></p>
-                            </div>
-                            <div class="orderSummaryContent">
-                                <p>Total</p>
-                                <p id="total"></p>
-                            </div>
-                    </div>
-                    <button id="submitBtn" type="submit">Submit</button>
-                </form>
+                            <button id="submitBtn" type="button">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <footer>
         <div class="footerContainer">
             <div class="footerContent">

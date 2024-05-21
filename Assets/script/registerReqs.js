@@ -1,13 +1,22 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-const appSettings = {
-    databaseURL: "https://emporium-authentication-default-rtdb.europe-west1.firebasedatabase.app/"
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyDitibZExDlfPGyKuK03ygP72t2xhxu4WU",
+    authDomain: "emporium-authentication.firebaseapp.com",
+    databaseURL: "https://emporium-authentication-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "emporium-authentication",
+    storageBucket: "emporium-authentication.appspot.com",
+    messagingSenderId: "956910928408",
+    appId: "1:956910928408:web:39ebd4d4de86a612b3396d"
 };
 
-const app = initializeApp(appSettings);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const itemsInDB = ref(database, "authentication/Items");
+const auth = getAuth();
 
 document.addEventListener("DOMContentLoaded", () => {
     const username = document.getElementById("registerUsername");
@@ -19,30 +28,72 @@ document.addEventListener("DOMContentLoaded", () => {
     const registerBtn = document.getElementById("registerBtn");
     const loginBtn = document.getElementById("loginBtn");
 
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let passwordConstraints = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordConstraints = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
-    registerBtn.addEventListener("click", function () {
-        if (username.value == "" || email.value == "" || password.value == "" || confirmPassword.value == "") {
+    registerBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (username.value === "" || email.value === "" || password.value === "" || confirmPassword.value === "") {
             alert("Please fill in all fields");
-        } else if (!emailRegex.test(email.value)) {
-            alert("Please enter a valid email address");
-        } else if (password.value != confirmPassword.value) {
-            alert("Passwords do not match");
-        } else if (!passwordConstraints.test(password.value)) {
-            alert("Password must contain at least 8 characters, one uppercase letter, one lowercase letter and one number");
-        }
-    });
-
-    loginBtn.addEventListener("click", function() {
-        if (loginUsername.value === '' || loginPassword.value === '') {
-            alert('Please enter both username and password.');
             return;
         }
+        if (!emailRegex.test(email.value)) {
+            alert("Please enter a valid email address");
+            return;
+        }
+        if (password.value !== confirmPassword.value) {
+            alert("Passwords do not match");
+            return;
+        }
+        if (!passwordConstraints.test(password.value)) {
+            alert("Password must contain at least 8 characters, one uppercase letter, one lowercase letter and one number");
+            return;
+        }
+
+        createUserWithEmailAndPassword(auth, email.value, password.value)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                set(ref(database, 'users/' + user.uid), {
+                    username: username.value,
+                    email: email.value,
+                    password: password.value 
+                });
+                alert("User created successfully");
+                switchForm(event, 'loginForm');
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+    });
+
+    loginBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (loginUsername.value === '' || loginPassword.value === '') {
+            alert('Please enter both email and password.');
+            return;
+        }
+
+        signInWithEmailAndPassword(auth, loginUsername.value, loginPassword.value)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                const date = new Date();
+                update(ref(database, 'users/' + user.uid), {
+                    lastLogin: date,
+                });
+                alert("User logged in successfully");
+                window.location.href = "index.html";
+            })
+            .catch((error) => {
+                alert("Invalid email or password");
+            });
     });
 });
 
-window.switchForm = function(event, formId) {
+window.switchForm = function (event, formId) {
     event.preventDefault();
     const registerForm = document.getElementById('registerForm');
     const loginForm = document.getElementById('loginForm');
@@ -53,4 +104,4 @@ window.switchForm = function(event, formId) {
         registerForm.style.display = 'none';
         loginForm.style.display = 'block';
     }
-}
+};

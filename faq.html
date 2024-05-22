@@ -156,28 +156,27 @@
       </div>
 
       <div>
-        <input
+        <input id="inputText"
           class="input--text"
           type="text"
           placeholder="Write your question down here..."
-          style="width: 100%; height: 70px"
+          style="width: 727px; height: 60px; margin-left: 10px; padding:5px"
         />
       </div>
 
-      <button
-        class="button--submit"
+      <button id="buttonSubmit"
+        class=".button--submit"
         style="
-          background-color: #915518;
-          color: #d2cdb2;
-          max-height: 0px;
-          padding: 40px 70px 60px 80px;
-          margin: 20px 0px 20px 0px;
+          background-color: #ccaf92;
+          color: white;
+          padding: 20px;
+          margin: 20px 0px 20px 10px;
           cursor: pointer;
-          font-size: 1.5rem;
+          font-size: 1rem;
           letter-spacing: 2px;
           border: none;
           cursor: pointer;
-          border-radius: 70px;
+          border-radius: 10px;
           transition: 0.5s;
         "
       >
@@ -224,6 +223,7 @@
       </div>
     </footer>
 
+    <script src="Assets/script/faq.js" type="module"></script>
     <script>
       const button = document.querySelector(".button--submit");
       const input = document.querySelector(".input--text");

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getDatabase, push, ref } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const appSettings = {
     databaseURL: "https://emporium-authentication-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -14,7 +14,7 @@ const newsletterBtn = document.getElementById("newsletterBtn");
 newsletterBtn.addEventListener("click", function () {
     const emailValue = newsletterEmail.value;
     if (emailValue) {
-        set(ref(database, "newsletterSubscribers"), {
+        push(ref(database, "newsletterSubscribers"), {
             email: emailValue
         })
         .then(() => {

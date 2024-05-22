@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/Style/faq.css" />
+    <script
+      src="https://kit.fontawesome.com/d676aaa729.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rye&family=Sedan+SC&display=swap"
+      rel="stylesheet"
+    />
+    <title>Faq</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          What is Emporium?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Emporium is a term often used to describe a store, shop, or business
+            space that offers various products, typically luxurious or
+            high-quality goods.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          What payment methods do you accept?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Do you offer international shipping?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Can I return or exchange an item if I'm not satisfied?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How can I track my order?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Do you offer gift wrapping services?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          What should I do if the item I want is out of stock?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+            saepe molestiae distinctio asperiores cupiditate consequuntur dolor
+            ullam, iure eligendi harum eaque hic corporis debitis porro
+            consectetur voluptate rem officiis architecto.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <input
+          class="input--text"
+          type="text"
+          placeholder="Write your question down here..."
+          style="width: 100%; height: 70px"
+        />
+      </div>
+
+      <button
+        class="button--submit"
+        style="
+          background-color: #915518;
+          color: #d2cdb2;
+          max-height: 0px;
+          padding: 40px 70px 60px 80px;
+          margin: 20px 0px 20px 0px;
+          cursor: pointer;
+          font-size: 1.5rem;
+          letter-spacing: 2px;
+          border: none;
+          cursor: pointer;
+          border-radius: 70px;
+          transition: 0.5s;
+        "
+      >
+        SUBMIT
+      </button>
+    </div>
+
+    <script>
+      const button = document.querySelector(".button--submit");
+      const input = document.querySelector(".input--text");
+
+      const timer = function () {
+        setTimeout(() => {
+          input.placeholder = "Write your question down here...";
+        }, 3000);
+      };
+
+      document.querySelectorAll(".accordion").forEach((item) => {
+        item.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      });
+
+      button.addEventListener("mouseover", function () {
+        this.style.transform = "translateY(10px)";
+      });
+
+      button.addEventListener("mouseout", function () {
+        this.style.transform = "translateY(-0px)";
+      });
+
+      button.addEventListener("click", function () {
+        if (input.value === "") {
+          input.placeholder = "Please specify a question!";
+        }
+
+        if (input.value !== "") {
+          input.value = "";
+          input.placeholder =
+            "THANK YOU FOR THIS GREAT QUESTION! We will help you as soon as possible";
+        }
+
+        return timer();
+      });
+    </script>
+  </body>
+</html>

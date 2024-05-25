@@ -1,0 +1,171 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F8F4E1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbarContainer {
+    color: #fff;
+    display: flex;
+    padding-left: 40px;
+    justify-content: space-between;
+    background-color: #AF8F6F;
+}
+
+.navbarLogo img{
+    width: 100px;
+    height: 100px;
+    margin-right: 320px;
+}
+
+.navbarSearch {
+    min-width: 40%;
+    height: 20px;
+    margin-right: 220px;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+#navLinks {
+    display: flex;
+    width: 50%;
+    margin-top: 35px;
+}
+
+.navItem {
+    margin-right: 40px;
+}
+
+.navbarContainer a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+#magnifier {
+    position: absolute;
+    top:35px;
+    left:1020px;
+    color: #be9b78;
+}
+
+.navbarContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+
+.orderStatusContainer {
+    text-align: center;
+    padding: 50px;
+}
+
+.orderStatusContainer h1 {
+    font-family: "Sedan SC", serif;
+    font-size: 2.5rem;
+    color: #AF8F6F;
+    margin-bottom: 50px;
+}
+
+.orderStatus {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.statusItem {
+    text-align: center;
+    margin: 20px;
+}
+
+.statusItem i {
+    font-size: 3rem;
+    color: #AF8F6F;
+}
+
+.statusItem p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.active {
+    color: #5cb85c;
+}
+
+@media screen and (max-width: 768px) {
+    .orderStatus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .statusItem {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+.footerContainer {
+    background-color: #AF8F6F;
+    color: #fff;
+    display: flex;
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.footerContainer h3 {
+    margin-left:40px;
+    text-decoration: none;
+    list-style-type: none;
+}
+ul li {
+    list-style-type: none;
+}
+.footerContent {
+    justify-content: space-between;
+    margin: 5px 100px 5px 90px;
+}
+
+.footerContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+
+.footerContainer {
+    background-color: #AF8F6F;
+    color: #fff;
+    display: flex;
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.footerContainer h3 {
+    margin-left:40px;
+    text-decoration: none;
+    list-style-type: none;
+}
+ul li {
+    list-style-type: none;
+}
+.footerContent {
+    justify-content: space-between;
+    margin: 5px 100px 5px 90px;
+}
+
+.footerContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}

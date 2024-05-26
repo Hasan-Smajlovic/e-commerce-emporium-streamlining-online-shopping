@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #F8F4E1;
     font-family: Arial, sans-serif;
@@ -17,7 +18,7 @@ body {
     background-color: #AF8F6F;
 }
 
-.navbarLogo img{
+.navbarLogo img {
     width: 100px;
     height: 100px;
     margin-right: 320px;
@@ -52,8 +53,8 @@ body {
 
 #magnifier {
     position: absolute;
-    top:35px;
-    left:1020px;
+    top: 35px;
+    left: 1020px;
     color: #be9b78;
 }
 
@@ -66,7 +67,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 20px;
-    background-color:#be9b78;
+    background-color: #be9b78;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -112,7 +113,7 @@ h1 {
     border: 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}  
+}
 
 /* Footer */
 .footerContainer {
@@ -123,17 +124,19 @@ h1 {
 
 .footerContainer a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 .footerContainer h3 {
-    margin-left:40px;
+    margin-left: 40px;
     text-decoration: none;
     list-style-type: none;
 }
+
 ul li {
     list-style-type: none;
 }
+
 .footerContent {
     justify-content: space-between;
     margin: 5px 100px 5px 90px;
@@ -143,6 +146,7 @@ ul li {
     color: #e6c8a9;
     transition: 0.5s;
 }
+
 .footerContainer {
     background-color: #AF8F6F;
     color: #fff;
@@ -151,17 +155,19 @@ ul li {
 
 .footerContainer a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 .footerContainer h3 {
-    margin-left:40px;
+    margin-left: 40px;
     text-decoration: none;
     list-style-type: none;
 }
+
 ul li {
     list-style-type: none;
 }
+
 .footerContent {
     justify-content: space-between;
     margin: 5px 100px 5px 90px;
@@ -171,6 +177,7 @@ ul li {
     color: #e6c8a9;
     transition: 0.5s;
 }
+
 .about-us-container {
     max-width: 1450px;
     width: 100%;
@@ -189,13 +196,15 @@ ul li {
     color: #333;
 }
 
-.intro-text, .more-info {
+.intro-text,
+.more-info {
     margin-bottom: 10px;
     text-align: center;
     font-size: 20px;
 }
 
-.intro-text p, .more-info p {
+.intro-text p,
+.more-info p {
     margin-bottom: 10px;
     line-height: 1.6;
     color: #555;
@@ -224,7 +233,8 @@ ul li {
 
 .picture-item p {
     margin-top: 10px;
-    margin-bottom: 0; /* Remove bottom margin to eliminate extra space */
+    margin-bottom: 0;
+    /* Remove bottom margin to eliminate extra space */
     font-size: 20px;
     color: #333;
 }
@@ -259,12 +269,13 @@ ul li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .footerContainer {
         width: 920px;
     }
+
     .footerContent {
         margin: 5px 50px 5px 50px;
     }
-    
+
 }

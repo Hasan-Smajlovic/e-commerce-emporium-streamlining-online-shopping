@@ -65,6 +65,8 @@ body {
 .orderStatusContainer {
     text-align: center;
     padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .orderStatusContainer h1 {

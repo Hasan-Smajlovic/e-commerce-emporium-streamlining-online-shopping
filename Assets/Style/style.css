@@ -13,23 +13,23 @@ body {
 .navbarContainer {
     color: #fff;
     display: flex;
-    flex-wrap: wrap;
+    padding-left: 40px;
     justify-content: space-between;
     background-color: #AF8F6F;
-    padding: 10px 40px;
 }
 
 .navbarLogo img {
     width: 100px;
     height: 100px;
-    margin-right: 20px;
+    margin-right: 320px;
 }
 
 .navbarSearch {
-    flex: 1;
-    height: 30px;
-    margin: 25px 20px;
+    min-width: 40%;
+    height: 20px;
+    margin-right: 220px;
     border-radius: 10px;
+    margin-top: 25px;
     padding: 10px;
     outline: none;
     border: none;
@@ -37,12 +37,12 @@ body {
 
 #navLinks {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 50%;
+    margin-top: 35px;
 }
 
 .navItem {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .navbarContainer a {
@@ -52,8 +52,10 @@ body {
 }
 
 #magnifier {
+    position: absolute;
+    top: 35px;
+    left: 1020px;
     color: #be9b78;
-    align-self: center;
 }
 
 .navbarContainer a:hover {
@@ -62,6 +64,15 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbarContainer {
+        width: 880px;
+    }
+
     .navbarSearch {
         display: none;
     }
@@ -71,39 +82,36 @@ body {
     }
 
     .navItem {
-        margin: 10px;
+        margin-left: 70px;
     }
 }
 
 /* End of Navbar */
-
 /* Home Page */
 .homeContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 100px 50px;
-    text-align: center;
+    margin: 100px 100px 100px 100px;
 }
 
 .homeContainer h2 {
     font-family: "Sedan SC", serif;
-    width: 100%;
-    font-size: 2.5rem;
+    width: 30%;
+    font-size: 3rem;
     letter-spacing: 2px;
-    margin-bottom: 20px;
 }
 
 .homeContainer p {
-    width: 100%;
+    width: 50%;
     font-size: 1.5rem;
     letter-spacing: 2px;
-    margin-bottom: 20px;
 }
 
 .homeContainer img {
+    position: absolute;
+    top: 170px;
+    left: 1000px;
     width: 25%;
-    margin: 20px auto;
 }
 
 .homeContainer a {
@@ -112,68 +120,77 @@ body {
     background-color: #AF8F6F;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 20px;
     display: inline-block;
     cursor: pointer;
     font-size: 1.5rem;
     letter-spacing: 2px;
-    margin-top: 20px;
 }
 
 .homeContainer a:hover {
     background-color: #ecba88;
+    color: white;
     transition: 0.5s;
 }
 
 @media screen and (max-width: 768px) {
+    #home {
+        background-image: url("../photos/home.png");
+        background-size: 100%;
+        width: 920px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
     .homeContainer {
-        margin: 0;
+        margin: 0px;
     }
 
-    .homeContainer h2 {
-        font-size: 2rem;
+    .homeContent h2 {
+        width: 400px;
+        margin-left: 280px;
     }
 
-    .homeContainer p {
-        font-size: 1rem;
+    .homeContent p {
+        text-align: center;
+        margin-left: 250px;
     }
 
-    .homeContainer img {
+    .homeContent img {
         display: none;
     }
 
-    .homeContainer a {
-        margin-top: 20px;
+    .homeContent a {
+        margin: 20px 0px 70px 0px;
     }
 }
 
-/* End of Home Page */
+/*End of Home Page */
 
-/* Categories Section */
+/*Categories Section */
 .categoriesContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 100px 50px;
-    text-align: center;
+    margin: 100px 100px 100px 100px;
 }
 
 .categoriesContent h1 {
     font-family: "Sedan SC", serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 2px;
-    width: 100%;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .categoriesContent button {
     background-color: #F8F4E1;
     color: #919191;
-    padding: 10px 50px;
+    max-height: 0px;
+    padding: 0px 100px 0px 100px;
+    margin: 20px 0px 20px 0px;
     cursor: pointer;
     font-size: 1.5rem;
     letter-spacing: 2px;
     border: none;
-    margin: 20px auto;
 }
 
 .categoriesContent button:hover {
@@ -182,17 +199,35 @@ body {
 }
 
 .categoriesContent img {
-    width: 100%;
-    margin-top: 20px;
+    width: 98%;
+    margin-left: 10px;
+}
+
+.categoriesFirstGallery {
+    display: flex;
+    margin-top: 50px;
+}
+
+.categoriesSecondGallery {
+    display: flex;
+    margin-top: 10px;
+    ;
 }
 
 @media screen and (max-width: 768px) {
+    #categories {
+        width: 920px;
+    }
+
     .categoriesContent h1 {
         font-size: 2rem;
+        text-align: center;
     }
 
     .categoriesContent button {
-        padding: 10px 20px;
+        padding: 10px 0px 10px 0px;
+        margin: 20px 20px 20px 20px;
+        text-align: center;
     }
 }
 
@@ -201,35 +236,33 @@ body {
 /* Shipping Info */
 .shippingInfoContainer {
     display: flex;
-    flex-wrap: wrap;
     text-align: center;
-    margin: 50px 50px;
 }
 
 .shippingInfoContent {
-    flex: 1;
-    margin: 20px;
+    margin-left: 220px;
+    text-align: center;
 }
 
 .shippingInfoContainer h3 {
     font-family: "Sedan SC", serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
 }
 
 .shippingInfoContainer p {
     font-size: 1rem;
     letter-spacing: 2px;
-    margin: 10px auto;
+    width: 200px;
 }
 
 @media screen and (max-width: 768px) {
-    .shippingInfoContainer {
-        margin: 0;
+    #shipping {
+        width: 920px;
     }
 
     .shippingInfoContent {
-        margin: 10px 0;
+        margin-left: 80px;
     }
 
     .shippingInfoContainer h3 {
@@ -239,59 +272,196 @@ body {
 
 /* End of Shipping Info */
 
-/* Trendy Collection */
+/*Trendy Collection */
 .trendyCollectionContainer {
     text-align: center;
-    margin: 100px 50px;
+    margin-top: 100px;
 }
 
 .trendyCollectionContainer h1 {
     font-family: "Sedan SC", serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 2px;
 }
 
 .trendyCollectionGallery {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 50px;
-}
-
-.trendyCollectionPhotos {
-    flex: 1;
-    margin: 10px;
+    margin-top: 100px;
 }
 
 .trendyCollectionPhotos img {
-    width: 100%;
-    transition: transform 0.5s;
+    width: 60%;
 }
 
 .trendyCollectionPhotos img:hover {
     transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .trendyCollectionPhotos p {
     font-size: 1rem;
     letter-spacing: 2px;
-    margin-top: 10px;
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 80px;
 }
 
 @media screen and (max-width: 768px) {
+    #trendyCollection {
+        width: 920px;
+    }
+
     .trendyCollectionContainer h1 {
         font-size: 2rem;
     }
 }
+
+/* End of Trendy Collection */
+
+/* About Us */
+.aboutContainer {
+    background-color: #AF8F6F;
+    margin: 50px;
+    padding: 20px 50px 0px 0px;
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutContent img {
+    width: 75%;
+}
+
+.aboutContent h3 {
+    font-family: "Sedan SC", serif;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.aboutContent p {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    max-width: 700px;
+    margin-top: 50px;
+}
+
+.aboutContainer button {
+    margin: 20px 0px 35px 220px;
+    background-color: #F8F4E1;
+    color: black;
+    padding: 17px;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+}
+
+.aboutContainer button:hover {
+    background-color: #e6c8a9;
+    color: white;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        width: 920px;
+    }
+
+    .aboutContentImg img {
+        display: none;
+    }
+
+    .aboutContent button {
+        margin: 20px 0px 20px 0px;
+    }
+}
+
+/* End of About Us */
+
+/* Newsletter */
+.newsletterContent {
+    text-align: center;
+    margin: 100px 100px 100px 100px;
+}
+
+.newsletterContent h1 {
+    font-family: "Sedan SC", serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.newsletterContent p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.newsletterContent input {
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    outline: none;
+    background-color: #F8F4E1;
+    border: 3px solid #AF8F6F;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #AF8F6F;
+}
+
+.newsletterContent button {
+    background-color: #AF8F6F;
+    color: #fff;
+    padding: 13px 20px 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border: none;
+}
+
+.newsletterContent button:hover {
+    background-color: #ecba88;
+    color: white;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    #newsletter {
+        width: 920px;
+    }
+
+    .newsletterContent input {
+        width: 80%;
+    }
+
+    .newsletterContent button {
+        margin-top: 20px;
+    }
+
+    .newsletterContent h1 {
+        font-size: 2rem;
+    }
+
+    .newsletterContent p {
+        font-size: 1rem;
+    }
+}
+
+/* End of Newsletter */
 
 /* Footer */
 .footerContainer {
     background-color: #AF8F6F;
     color: #fff;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
 }
 
 .footerContainer a {
@@ -301,4 +471,33 @@ body {
 
 .footerContainer h3 {
     margin-left: 40px;
+    text-decoration: none;
+    list-style-type: none;
 }
+
+ul li {
+    list-style-type: none;
+}
+
+.footerContent {
+    justify-content: space-between;
+    margin: 5px 100px 5px 90px;
+}
+
+.footerContainer a:hover {
+    color: #e6c8a9;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    .footerContainer {
+        width: 920px;
+    }
+
+    .footerContent {
+        margin: 5px 50px 5px 50px;
+    }
+
+}
+
+/* End of Footer */

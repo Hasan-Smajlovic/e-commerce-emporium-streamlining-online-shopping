@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #F8F4E1;
     font-family: Arial, sans-serif;
@@ -17,7 +18,7 @@ body {
     background-color: #AF8F6F;
 }
 
-.navbarLogo img{
+.navbarLogo img {
     width: 100px;
     height: 100px;
     margin-right: 320px;
@@ -52,8 +53,8 @@ body {
 
 #magnifier {
     position: absolute;
-    top:35px;
-    left:1020px;
+    top: 35px;
+    left: 1020px;
     color: #be9b78;
 }
 
@@ -66,7 +67,7 @@ body {
     text-align: center;
     padding: 50px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
 }
 
 .orderStatusContainer h1 {
@@ -122,17 +123,19 @@ body {
 
 .footerContainer a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 .footerContainer h3 {
-    margin-left:40px;
+    margin-left: 40px;
     text-decoration: none;
     list-style-type: none;
 }
+
 ul li {
     list-style-type: none;
 }
+
 .footerContent {
     justify-content: space-between;
     margin: 5px 100px 5px 90px;
@@ -151,17 +154,19 @@ ul li {
 
 .footerContainer a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 .footerContainer h3 {
-    margin-left:40px;
+    margin-left: 40px;
     text-decoration: none;
     list-style-type: none;
 }
+
 ul li {
     list-style-type: none;
 }
+
 .footerContent {
     justify-content: space-between;
     margin: 5px 100px 5px 90px;

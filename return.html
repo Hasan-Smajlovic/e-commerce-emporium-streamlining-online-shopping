@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/Style/return.css" />
+    <script src="https://kit.fontawesome.com/d676aaa729.js" crossorigin="anonymous"></script>
+    <script src="Assets/script/return.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Sedan+SC&display=swap" rel="stylesheet"/>
+    <title>Emporium</title>
+  </head>
+  <body>
+    <body>
+        <div class="navbarContainer">
+          <div class="navbarLogo">
+            <a> <img src="Assets/photos/logo.png" alt="logo" /> </a>
+          </div>
+          <input
+            class="navbarSearch"
+            type="text"
+            placeholder="Search for Gold Jewellery, Diamond Jewellery and more..."
+          />
+          <div id="magnifier">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="navLinks">
+            <div class="navItem">
+              <a href="shopping-section.html">
+                <i class="fa-solid fa-bag-shopping fa-xl"></i>
+              </a>
+            </div>
+            <div class="navItem">
+              <a href="shoppingCart.html">
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+              </a>
+            </div>
+            <div class="navItem">
+              <a href="signup.html">
+                <i class="fa-regular fa-user fa-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  </body>
+
+  <div class="container">
+    <h1>Return policy</h1>
+    <form id="returnForm">
+        <div class="form-group">
+            <label for="orderId">Order ID:</label>
+            <input type="text" id="orderId" name="orderId" required>
+        </div>
+        <div class="form-group">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+        </div>
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+        </div>
+        <div class="form-group">
+            <label for="jewelryType">Jewelry Type:</label>
+            <select id="jewelryType" name="jewelryType" required>
+                <option value="">Select a type</option>
+                <option value="ring">Ring</option>
+                <option value="necklace">Necklace</option>
+                <option value="bracelet">Bracelet</option>
+                <option value="earrings">Earrings</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason for Return:</label>
+            <select id="reason" name="reason" required>
+                <option value="">Select a reason</option>
+                <option value="damaged">Damaged</option>
+                <option value="wrongItem">Wrong Item</option>
+                <option value="notAsDescribed">Not as Described</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+</div>
+<script src="scripts.js"></script>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="footerContent">
+        <h3>My Account</h3>
+        <ul>
+          <li><a href="https://www.facebook.com">Profile</a></li>
+          <li><a href="shoppingCart.html">Cart</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footerContent">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="return.html">Returns</a></li>
+          <li><a href="orderstatus.html">Order Status</a></li>
+        </ul>
+      </div>
+      <div class="footerContent">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.facebook.com">Facebook</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
+          <li><a href="https://www.twitter.com">Twitter</a></li>
+          <li><a href="https://www.pinterest.com">Pinterest</a></li>
+        </ul>
+      </div>
+      <div class="footerContent">
+        <h3>About Us</h3>
+        <ul>
+          <li>Phone: 061-896-745</li>
+          <li>Email: euporium@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="Assets/script/newsLetter.js" type="module"></script>
+</body>
+</html>
